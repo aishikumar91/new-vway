@@ -122,6 +122,10 @@ html {
     background-color: hsl(24 90% 54% / 0.3);
     color: hsl(24 90% 70%);
   }
+
+  .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+    color: hsl(var(--primary)) !important;
+  }
 }
 
 @layer components {
@@ -210,7 +214,18 @@ html {
   }
 
   .dark .text-image-clip {
-    filter: brightness(1.15);
+    background: none !important;
+    background-image: none !important;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+    -webkit-text-fill-color: hsl(var(--primary));
+    color: hsl(var(--primary));
+    filter: none;
+  }
+
+  .dark section.relative.min-h-screen,
+  .dark section.section-padding {
+    background-image: linear-gradient(to bottom, hsl(24 90% 54% / 0.06) 0%, transparent 50%);
   }
 
   .hero-gradient-orb {
