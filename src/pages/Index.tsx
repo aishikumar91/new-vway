@@ -34,7 +34,7 @@ const Index = () => {
   return (
     <Layout>
       {/* ===== HERO ===== */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-background">
+      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-background/85">
         <div className="absolute inset-0 dot-pattern opacity-30" />
 
         <motion.div

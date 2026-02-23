@@ -26,7 +26,7 @@ const Milestones = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-background">
+      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-background/85">
         <div className="absolute inset-0 dot-pattern opacity-40" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/70 to-background" />
 

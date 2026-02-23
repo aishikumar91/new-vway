@@ -24,7 +24,7 @@ const About = () => {
   return (
     <Layout>
       {/* ===== HERO ===== */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-background">
+      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-background/85">
         <div className="absolute inset-0 dot-pattern opacity-40" />
 
         <motion.div
