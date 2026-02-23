@@ -12,6 +12,7 @@ import healthMaternal from "@/assets/health-maternal.jpg";
 import communityAgriculture from "@/assets/community-agriculture.jpg";
 import eventCelebration from "@/assets/event-celebration.jpg";
 import eventSpeakerPodium from "@/assets/event-speaker-podium.jpg";
+import heroBg from "@/assets/hero-bg.jpg";
 
 const posts = [
   { title: "1,000 Youths Empowered with Free Skills & Equipment in 2023", slug: "1000-youths-empowered-2023", category: "Impact", date: "Feb 10, 2026", excerpt: "VHAY's free skill acquisition program distributed laptops, sewing machines, baking equipment, and more to youth across Nigeria.", featured: true, image: eventCertificates },
@@ -50,7 +51,8 @@ const Blog = () => {
             initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 1, delay: 0.1, ease: [0.25, 0.1, 0.25, 1] }}
-            className="font-display text-[3rem] sm:text-[4.5rem] md:text-[6rem] lg:text-[7.5rem] xl:text-[9rem] font-bold leading-[0.85] sm:leading-[0.88] mb-6 sm:mb-8 text-gradient-orange"
+            className="font-display text-[4rem] sm:text-[6rem] md:text-[8rem] lg:text-[10rem] xl:text-[12rem] font-bold leading-[0.85] sm:leading-[0.88] mb-6 sm:mb-8 text-image-clip"
+            style={{ backgroundImage: `url(${heroBg})` }}
           >
             STORIES OF
             <br />

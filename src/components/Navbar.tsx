@@ -3,13 +3,15 @@ import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowRight, Sun, Moon } from "lucide-react";
 import { useTheme } from "@/hooks/useTheme";
+import vhayLogo from "@/assets/vhay-logo.png";
 
 const navLinks = [
   { label: "ABOUT", path: "/about" },
-  { label: "AGENDAS", path: "/programs" },
+  { label: "PROGRAMS", path: "/programs" },
+  { label: "TEAM", path: "/team" },
   { label: "EVENTS", path: "/events" },
+  { label: "MEDIA", path: "/media" },
   { label: "BLOG", path: "/blog" },
-  { label: "GALLERY", path: "/gallery" },
   { label: "CONTACT", path: "/contact" },
 ];
 
@@ -39,13 +41,12 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between px-4 py-3 sm:py-4">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 sm:gap-3 group">
-          <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-primary flex items-center justify-center shadow-lg shadow-primary/20 group-hover:shadow-primary/40 transition-shadow duration-300">
-            <span className="text-primary-foreground font-display font-bold text-xs sm:text-sm">V</span>
-          </div>
-          <span className="font-display font-bold text-base sm:text-lg text-foreground tracking-tight">
-            VALOROUS <span className="text-primary">AFRICA</span>
-          </span>
+        <Link to="/" className="flex items-center gap-2 group">
+          <img
+            src={vhayLogo}
+            alt="VHAY Logo"
+            className="h-12 sm:h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+          />
         </Link>
 
         {/* Desktop nav links */}
@@ -90,7 +91,7 @@ const Navbar = () => {
           </button>
           <Link
             to="/donate"
-            className="group flex items-center gap-2 px-6 py-2.5 rounded-full text-xs font-bold tracking-wider glow-button"
+            className="group flex items-center gap-2 px-5 py-2 rounded-full text-[10px] font-bold tracking-wider glow-button"
           >
             DONATE
             <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform duration-200" />
@@ -165,7 +166,7 @@ const Navbar = () => {
                 <Link
                   to="/donate"
                   onClick={() => setOpen(false)}
-                  className="flex items-center justify-center gap-2 w-full py-3 rounded-full text-xs font-bold tracking-wider glow-button"
+                  className="flex items-center justify-center gap-2 w-full py-2.5 rounded-full text-[10px] font-bold tracking-wider glow-button"
                 >
                   DONATE <ArrowRight size={14} />
                 </Link>

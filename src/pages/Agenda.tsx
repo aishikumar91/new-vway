@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, ArrowLeft, CheckCircle } from "lucide-react";
 import Layout from "@/components/Layout";
 import { agendas } from "@/data/agendas";
+import heroBg from "@/assets/hero-bg.jpg";
 
 
 const Agenda = () => {
@@ -17,7 +18,7 @@ const Agenda = () => {
           <div className="absolute inset-0 dot-pattern opacity-30" />
           <div className="container mx-auto text-center relative z-10">
             <h1 className="font-display text-3xl font-bold text-foreground mb-6">AGENDA NOT FOUND</h1>
-            <Link to="/programs" className="glow-button px-8 py-3 rounded-full text-sm font-bold tracking-wider inline-flex items-center gap-2">
+            <Link to="/programs" className="glow-button px-5 py-2 rounded-full text-[10px] font-bold tracking-wider inline-flex items-center gap-2">
               <ArrowLeft size={16} /> VIEW ALL AGENDAS
             </Link>
           </div>
@@ -46,7 +47,8 @@ const Agenda = () => {
               Agenda {agenda.number} of 7
             </span>
             <h1
-              className="font-display text-[2.5rem] sm:text-[3.5rem] md:text-[5rem] lg:text-[6rem] xl:text-[7rem] font-bold leading-[0.85] sm:leading-[0.88] mb-4 text-gradient-orange"
+              className="font-display text-[3.5rem] sm:text-[5rem] md:text-[7rem] lg:text-[8rem] xl:text-[10rem] font-bold leading-[0.85] sm:leading-[0.88] mb-4 text-image-clip"
+              style={{ backgroundImage: `url(${heroBg})` }}
             >
               {agenda.title.toUpperCase()}
             </h1>
@@ -89,12 +91,12 @@ const Agenda = () => {
             {/* Navigation */}
             <div className="flex items-center justify-between mb-12">
               {prevAgenda ? (
-                <Link to={`/agenda/${index}`} className="glow-button-outline px-6 py-3 rounded-full text-xs font-bold tracking-wider inline-flex items-center gap-2">
+                <Link to={`/agenda/${index}`} className="glow-button-outline px-5 py-2 rounded-full text-[10px] font-bold tracking-wider inline-flex items-center gap-2">
                   <ArrowLeft size={14} /> {prevAgenda.shortTitle}
                 </Link>
               ) : <div />}
               {nextAgenda ? (
-                <Link to={`/agenda/${index + 2}`} className="glow-button px-6 py-3 rounded-full text-xs font-bold tracking-wider inline-flex items-center gap-2">
+                <Link to={`/agenda/${index + 2}`} className="glow-button px-5 py-2 rounded-full text-[10px] font-bold tracking-wider inline-flex items-center gap-2">
                   {nextAgenda.shortTitle} <ArrowRight size={14} />
                 </Link>
               ) : <div />}
@@ -102,7 +104,7 @@ const Agenda = () => {
 
             {/* CTA */}
             <div className="text-center">
-              <Link to="/donate" className="glow-button px-8 py-3.5 rounded-full text-sm font-bold tracking-wider inline-flex items-center gap-2">
+              <Link to="/donate" className="glow-button px-5 py-2 rounded-full text-[10px] font-bold tracking-wider inline-flex items-center gap-2">
                 SUPPORT THIS AGENDA <ArrowRight size={16} />
               </Link>
             </div>

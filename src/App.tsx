@@ -30,6 +30,10 @@ import NewsletterManager from "./pages/admin/NewsletterManager";
 import ContactManager from "./pages/admin/ContactManager";
 import ActivityManager from "./pages/admin/ActivityManager";
 import AuditLogManager from "./pages/admin/AuditLogManager";
+import Team from "./pages/Team";
+import Media from "./pages/Media";
+import Partners from "./pages/Partners";
+import Milestones from "./pages/Milestones";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -52,6 +56,10 @@ const App = () => (
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/donate" element={<Donate />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/media" element={<Media />} />
+            <Route path="/partners" element={<Partners />} />
+            <Route path="/milestones" element={<Milestones />} />
             <Route path="/agenda/:id" element={<Agenda />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/terms" element={<TermsOfService />} />

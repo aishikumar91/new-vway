@@ -39,6 +39,7 @@ import eventOutreachField from "@/assets/event-outreach-field.jpg";
 import eventRuralOutreach from "@/assets/event-rural-outreach.jpg";
 import eventYouthLeaders from "@/assets/event-youth-leaders.jpg";
 import eventCelebration from "@/assets/event-celebration.jpg";
+import heroBg from "@/assets/hero-bg.jpg";
 
 const images = [
   { title: "Skill Acquisition Training", category: "Skills", src: skillsFashionClass, aspectClass: "aspect-square" },
@@ -119,7 +120,8 @@ const Gallery = () => (
 
           <motion.h1
             variants={heroChild}
-            className="font-display text-[3rem] sm:text-[4.5rem] md:text-[6rem] lg:text-[7.5rem] xl:text-[9rem] font-bold leading-[0.85] sm:leading-[0.88] mb-6 sm:mb-8 text-gradient-orange"
+            className="font-display text-[4rem] sm:text-[6rem] md:text-[8rem] lg:text-[10rem] xl:text-[12rem] font-bold leading-[0.85] sm:leading-[0.88] mb-6 sm:mb-8 text-image-clip"
+            style={{ backgroundImage: `url(${heroBg})` }}
           >
             MOMENTS OF
             <br />

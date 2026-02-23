@@ -12,6 +12,7 @@ import eventGroupBackdrop from "@/assets/event-group-backdrop.jpg";
 import healthOutreach from "@/assets/health-outreach.jpg";
 import skillsSewingMachines from "@/assets/skills-sewing-machines.jpg";
 import eventAudienceWide from "@/assets/event-audience-wide.jpg";
+import heroBg from "@/assets/hero-bg.jpg";
 
 const upcoming = [
   { title: "Pan-African Youth Empowerment Summit", date: "March 15, 2026", location: "Lagos, Nigeria", description: "A 3-day summit bringing together youth leaders from 14 African countries.", image: eventBannerStage },
@@ -51,7 +52,8 @@ const Events = () => (
           initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           transition={{ duration: 1, delay: 0.1, ease: [0.25, 0.1, 0.25, 1] }}
-          className="font-display text-[3rem] sm:text-[4.5rem] md:text-[6rem] lg:text-[7.5rem] xl:text-[9rem] font-bold leading-[0.85] sm:leading-[0.88] mb-6 sm:mb-8 text-gradient-orange"
+          className="font-display text-[4rem] sm:text-[6rem] md:text-[8rem] lg:text-[10rem] xl:text-[12rem] font-bold leading-[0.85] sm:leading-[0.88] mb-6 sm:mb-8 text-image-clip"
+          style={{ backgroundImage: `url(${heroBg})` }}
         >
           UPCOMING
           <br />
@@ -97,7 +99,7 @@ const Events = () => (
                   <MapPin size={13} className="text-primary/70" />
                   <span>{event.location}</span>
                 </div>
-                <button className="w-full glow-button py-2.5 rounded-full text-sm font-semibold tracking-wider flex items-center justify-center gap-2 group/btn">
+                <button className="w-full glow-button py-2 rounded-full text-xs font-semibold tracking-wider flex items-center justify-center gap-2 group/btn">
                   Register
                   <ArrowRight size={14} className="group-hover/btn:translate-x-0.5 transition-transform" />
                 </button>

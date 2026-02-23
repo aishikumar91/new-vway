@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Shield } from "lucide-react";
 import Layout from "@/components/Layout";
+import heroBg from "@/assets/hero-bg.jpg";
 
 
 const PrivacyPolicy = () => (
@@ -14,7 +15,8 @@ const PrivacyPolicy = () => (
             Legal
           </span>
           <h1
-            className="font-display text-[2.5rem] sm:text-[3.5rem] md:text-[5rem] lg:text-[6rem] xl:text-[7rem] font-bold leading-[0.85] sm:leading-[0.88] mb-6 sm:mb-8 text-gradient-orange"
+            className="font-display text-[3.5rem] sm:text-[5rem] md:text-[7rem] lg:text-[8rem] xl:text-[10rem] font-bold leading-[0.85] sm:leading-[0.88] mb-6 sm:mb-8 text-image-clip"
+            style={{ backgroundImage: `url(${heroBg})` }}
           >
             PRIVACY
             <br />

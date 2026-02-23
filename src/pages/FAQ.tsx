@@ -3,6 +3,7 @@ import { HelpCircle } from "lucide-react";
 import Layout from "@/components/Layout";
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import heroBg from "@/assets/hero-bg.jpg";
 
 const faqs = [
   { q: "What is VHAY?", a: "Valorous Hope for African Youths (VHAY) is a pan-African empowerment movement operating across 14 African countries and 28 Nigerian states. We focus on seven strategic agendas covering skill acquisition, education, health, justice, climate action, and elderly care." },
@@ -35,7 +36,8 @@ const FAQ = () => (
           </motion.div>
           <motion.h1
             variants={heroChild}
-            className="font-display text-[2.5rem] sm:text-[3.5rem] md:text-[5rem] lg:text-[6rem] xl:text-[7rem] font-bold leading-[0.85] sm:leading-[0.88] mb-6 sm:mb-8 text-gradient-orange"
+            className="font-display text-[3.5rem] sm:text-[5rem] md:text-[7rem] lg:text-[8rem] xl:text-[10rem] font-bold leading-[0.85] sm:leading-[0.88] mb-6 sm:mb-8 text-image-clip"
+            style={{ backgroundImage: `url(${heroBg})` }}
           >
             FREQUENTLY
             <br />

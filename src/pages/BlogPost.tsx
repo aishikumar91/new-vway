@@ -7,6 +7,7 @@ import Layout from "@/components/Layout";
 import SocialShareButtons from "@/components/SocialShareButtons";
 import { supabase } from "@/integrations/supabase/client";
 import { useEffect } from "react";
+import heroBg from "@/assets/hero-bg.jpg";
 
 
 const BlogPost = () => {
@@ -57,7 +58,7 @@ const BlogPost = () => {
           <div className="absolute inset-0 dot-pattern opacity-30" />
           <div className="container mx-auto text-center relative z-10">
             <h1 className="font-display text-3xl font-bold text-foreground mb-6">POST NOT FOUND</h1>
-            <Link to="/blog" className="glow-button px-8 py-3 rounded-full text-sm font-bold tracking-wider inline-flex items-center gap-2">
+            <Link to="/blog" className="glow-button px-5 py-2 rounded-full text-[10px] font-bold tracking-wider inline-flex items-center gap-2">
               <ArrowLeft size={14} /> BACK TO BLOG
             </Link>
           </div>
@@ -84,7 +85,8 @@ const BlogPost = () => {
             </Link>
 
             <h1
-              className="font-display text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] font-bold leading-[0.88] mb-5 text-gradient-orange"
+              className="font-display text-[3rem] sm:text-[4rem] md:text-[5rem] lg:text-[6rem] font-bold leading-[0.88] mb-5 text-image-clip"
+              style={{ backgroundImage: `url(${heroBg})` }}
             >
               {post.title?.toUpperCase()}
             </h1>

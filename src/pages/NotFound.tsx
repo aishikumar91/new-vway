@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowLeft, Home } from "lucide-react";
+import heroBg from "@/assets/hero-bg.jpg";
 
 
 const NotFound = () => {
@@ -22,7 +23,8 @@ const NotFound = () => {
         className="text-center relative z-10 px-4"
       >
         <h1
-          className="font-display text-[4rem] sm:text-[6rem] md:text-[8rem] lg:text-[10rem] font-bold leading-[0.85] mb-4 text-gradient-orange"
+          className="font-display text-[4rem] sm:text-[6rem] md:text-[8rem] lg:text-[10rem] font-bold leading-[0.85] mb-4 text-image-clip"
+          style={{ backgroundImage: `url(${heroBg})` }}
         >
           404
         </h1>
@@ -34,10 +36,10 @@ const NotFound = () => {
           The page you're looking for doesn't exist or has been moved.
         </p>
         <div className="flex items-center justify-center gap-4">
-          <Link to="/" className="glow-button px-6 py-3 rounded-full text-sm font-bold tracking-wider flex items-center gap-2">
+          <Link to="/" className="glow-button px-5 py-2 rounded-full text-[10px] font-bold tracking-wider flex items-center gap-2">
             <Home size={14} /> GO HOME
           </Link>
-          <button onClick={() => window.history.back()} className="glow-button-outline px-6 py-3 rounded-full text-sm font-bold tracking-wider flex items-center gap-2">
+          <button onClick={() => window.history.back()} className="glow-button-outline px-5 py-2 rounded-full text-[10px] font-bold tracking-wider flex items-center gap-2">
             <ArrowLeft size={14} /> GO BACK
           </button>
         </div>
