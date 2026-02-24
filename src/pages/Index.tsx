@@ -42,13 +42,9 @@ const Index = () => {
           loop
           muted
           playsInline
-          preload="metadata"
-          poster={heroBg}
-          disablePictureInPicture
-          disableRemotePlayback
           className="absolute inset-0 w-full h-full object-cover z-0"
         />
-        <div className="absolute inset-0 bg-white/15 dark:bg-black/15 z-[1]" aria-hidden />
+        <div className="absolute inset-0 bg-white/20 dark:bg-black/25 backdrop-blur-sm z-[1]" aria-hidden />
         <div className="absolute inset-0 dot-pattern opacity-15 z-[2]" aria-hidden />
 
         <motion.div
