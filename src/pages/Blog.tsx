@@ -32,12 +32,12 @@ const Blog = () => {
 
   return (
     <Layout>
-      <section className="section-padding dot-pattern relative overflow-hidden">
+      <section className="relative overflow-hidden bg-background/85 pt-32 pb-20 md:pt-40 md:pb-24 dot-pattern">
         <div className="absolute inset-0 opacity-[0.07]">
           <img src={eventSpeakerPodium} alt="" className="w-full h-full object-cover" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/70 to-background" />
-        <div className="container mx-auto text-center pt-16 pb-4 relative z-10">
+        <div className="container mx-auto px-4 text-left relative z-10">
           <motion.span
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
@@ -51,7 +51,7 @@ const Blog = () => {
             initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 1, delay: 0.1, ease: [0.25, 0.1, 0.25, 1] }}
-            className="font-display text-[4rem] sm:text-[6rem] md:text-[8rem] lg:text-[10rem] xl:text-[12rem] font-bold leading-[0.85] sm:leading-[0.88] mb-6 sm:mb-8 text-image-clip"
+            className="font-display text-[3.25rem] sm:text-[4.75rem] md:text-[6.5rem] lg:text-[8rem] xl:text-[9.5rem] font-bold leading-[0.85] sm:leading-[0.88] mb-6 sm:mb-8 text-image-clip text-left"
             style={{ backgroundImage: `url(${heroBg})` }}
           >
             STORIES OF
@@ -62,13 +62,13 @@ const Blog = () => {
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="line-glow h-px w-28 sm:w-40 mx-auto mb-6 sm:mb-8"
+            className="line-glow h-px w-28 sm:w-40 mr-auto mb-6 sm:mb-8"
           />
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed"
+            className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl leading-relaxed text-left"
           >
             Insights, updates, and stories from across the VHAY community.
           </motion.p>

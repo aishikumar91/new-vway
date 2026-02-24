@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, ChevronDown, Heart, Users, Globe, Sparkles, BookOpen, Briefcase, Lightbulb, Stethoscope, CheckCircle } from "lucide-react";
 import Layout from "@/components/Layout";
 import heroBg from "@/assets/hero-bg.jpg";
+import heroVideo from "@/assets/Generate_a_video_202602240824_6rq8i.mp4";
 
 const impactStats = [
   { icon: Users, value: "1,000+", label: "Youth Empowered" },
@@ -34,8 +35,17 @@ const Index = () => {
   return (
     <Layout>
       {/* ===== HERO ===== */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-background/85">
-        <div className="absolute inset-0 dot-pattern opacity-30" />
+      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-24 md:pt-32">
+        <video
+          src={heroVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        />
+        <div className="absolute inset-0 bg-white/15 dark:bg-black/15 z-[1]" aria-hidden />
+        <div className="absolute inset-0 dot-pattern opacity-15 z-[2]" aria-hidden />
 
         <motion.div
           style={{ opacity: heroOpacity, scale: heroScale, y: parallaxY }}
@@ -52,7 +62,7 @@ const Index = () => {
             initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             transition={{ duration: 1, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
-            className="font-display text-[5rem] sm:text-[7rem] md:text-[9rem] lg:text-[12rem] xl:text-[14rem] 2xl:text-[16rem] font-bold leading-[0.85] sm:leading-[0.88] mb-6 sm:mb-8 text-image-clip"
+            className="font-display text-[4rem] sm:text-[5.5rem] md:text-[7rem] lg:text-[9.5rem] xl:text-[11rem] 2xl:text-[13rem] font-bold leading-[0.85] sm:leading-[0.88] mb-6 sm:mb-8 text-image-clip"
             style={{ backgroundImage: `url(${heroBg})` }}
           >
             VALOROUS

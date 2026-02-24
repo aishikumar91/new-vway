@@ -27,7 +27,7 @@ const FAQ = () => (
     <section className="section-padding relative overflow-hidden">
       <div className="absolute inset-0 dot-pattern opacity-30" />
       <div className="container mx-auto max-w-3xl relative z-10">
-        <motion.div variants={heroStagger} initial="hidden" animate="show" className="text-center mb-14">
+        <motion.div variants={heroStagger} initial="hidden" animate="show" className="text-left mb-14">
           <motion.div variants={heroChild}>
             <span className="inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-primary mb-6 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5">
               <HelpCircle size={12} />
@@ -36,7 +36,7 @@ const FAQ = () => (
           </motion.div>
           <motion.h1
             variants={heroChild}
-            className="font-display text-[3.5rem] sm:text-[5rem] md:text-[7rem] lg:text-[8rem] xl:text-[10rem] font-bold leading-[0.85] sm:leading-[0.88] mb-6 sm:mb-8 text-image-clip"
+            className="font-display text-[2.75rem] sm:text-[4rem] md:text-[5.5rem] lg:text-[6.5rem] xl:text-[8rem] font-bold leading-[0.85] sm:leading-[0.88] mb-6 sm:mb-8 text-image-clip text-left"
             style={{ backgroundImage: `url(${heroBg})` }}
           >
             FREQUENTLY
@@ -45,8 +45,8 @@ const FAQ = () => (
             <br />
             QUESTIONS
           </motion.h1>
-          <motion.div variants={heroChild} className="line-glow h-px w-28 sm:w-40 mx-auto mb-6" />
-          <motion.p variants={heroChild} className="text-muted-foreground font-light">
+          <motion.div variants={heroChild} className="line-glow h-px w-28 sm:w-40 mr-auto mb-6" />
+          <motion.p variants={heroChild} className="text-muted-foreground font-light text-left">
             Everything you need to know about VHAY and our mission.
           </motion.p>
         </motion.div>

@@ -23,7 +23,7 @@ const NotFound = () => {
         className="text-center relative z-10 px-4"
       >
         <h1
-          className="font-display text-[4rem] sm:text-[6rem] md:text-[8rem] lg:text-[10rem] font-bold leading-[0.85] mb-4 text-image-clip"
+          className="font-display text-[3.25rem] sm:text-[4.75rem] md:text-[6.5rem] lg:text-[8rem] font-bold leading-[0.85] mb-4 text-image-clip"
           style={{ backgroundImage: `url(${heroBg})` }}
         >
           404

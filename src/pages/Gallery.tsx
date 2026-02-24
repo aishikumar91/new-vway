@@ -97,18 +97,18 @@ const heroChild = {
 const Gallery = () => (
   <Layout>
     {/* ── Hero ── */}
-    <section className="section-padding dot-pattern relative overflow-hidden">
+    <section className="relative overflow-hidden bg-background/85 pt-32 pb-20 md:pt-40 md:pb-24 dot-pattern">
       <div className="absolute inset-0 opacity-[0.07]">
         <img src={eventGroupBackdrop} alt="" className="w-full h-full object-cover" />
       </div>
       <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/80 to-background" />
 
-      <div className="container mx-auto text-center pt-16 pb-4 relative z-10">
+      <div className="container mx-auto px-4 text-left relative z-10">
         <motion.div
           variants={heroStagger}
           initial="hidden"
           animate="show"
-          className="flex flex-col items-center"
+          className="flex flex-col items-start"
         >
           <motion.span
             variants={heroChild}
@@ -120,7 +120,7 @@ const Gallery = () => (
 
           <motion.h1
             variants={heroChild}
-            className="font-display text-[4rem] sm:text-[6rem] md:text-[8rem] lg:text-[10rem] xl:text-[12rem] font-bold leading-[0.85] sm:leading-[0.88] mb-6 sm:mb-8 text-image-clip"
+            className="font-display text-[3.25rem] sm:text-[4.75rem] md:text-[6.5rem] lg:text-[8rem] xl:text-[9.5rem] font-bold leading-[0.85] sm:leading-[0.88] mb-6 sm:mb-8 text-image-clip text-left"
             style={{ backgroundImage: `url(${heroBg})` }}
           >
             MOMENTS OF
@@ -128,11 +128,11 @@ const Gallery = () => (
             IMPACT
           </motion.h1>
 
-          <motion.div variants={heroChild} className="line-glow h-px w-28 sm:w-40 mx-auto mb-6 sm:mb-8" />
+          <motion.div variants={heroChild} className="line-glow h-px w-28 sm:w-40 mr-auto mb-6 sm:mb-8" />
 
           <motion.p
             variants={heroChild}
-            className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed"
+            className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl leading-relaxed text-left"
           >
             Real moments from VHAY's work across Africa — empowering, healing, and transforming communities.
           </motion.p>

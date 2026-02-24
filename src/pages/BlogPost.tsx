@@ -76,16 +76,16 @@ const BlogPost = () => {
         </div>
       )}
 
-      <section className="section-padding relative overflow-hidden">
+      <section className="relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-24">
         <div className="absolute inset-0 dot-pattern opacity-20" />
-        <div className="container mx-auto max-w-3xl relative z-10">
+        <div className="container mx-auto px-4 max-w-3xl relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <Link to="/blog" className="text-sm text-muted-foreground hover:text-primary transition-colors inline-flex items-center gap-1.5 mb-8">
               <ArrowLeft size={14} /> Back to Blog
             </Link>
 
             <h1
-              className="font-display text-[3rem] sm:text-[4rem] md:text-[5rem] lg:text-[6rem] font-bold leading-[0.88] mb-5 text-image-clip"
+              className="font-display text-[2.5rem] sm:text-[3.25rem] md:text-[4rem] lg:text-[4.75rem] font-bold leading-[0.88] mb-5 text-image-clip"
               style={{ backgroundImage: `url(${heroBg})` }}
             >
               {post.title?.toUpperCase()}

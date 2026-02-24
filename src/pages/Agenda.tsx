@@ -33,26 +33,26 @@ const Agenda = () => {
   return (
     <Layout>
       {/* Hero with image */}
-      <section className="relative min-h-[50vh] md:min-h-[55vh] flex items-end overflow-hidden">
+      <section className="relative min-h-[50vh] md:min-h-[55vh] flex items-end overflow-hidden pt-24 md:pt-32">
         <img src={agenda.image} alt={agenda.title} className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
-        <div className="relative z-10 container mx-auto px-4 pb-10 sm:pb-14 text-center">
+        <div className="relative z-10 container mx-auto px-4 pb-10 sm:pb-14 text-left">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col items-center"
+            className="flex flex-col items-start"
           >
             <span className="inline-flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.2em] text-primary mb-4 sm:mb-6 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-sm">
               Agenda {agenda.number} of 7
             </span>
             <h1
-              className="font-display text-[3.5rem] sm:text-[5rem] md:text-[7rem] lg:text-[8rem] xl:text-[10rem] font-bold leading-[0.85] sm:leading-[0.88] mb-4 text-image-clip"
+              className="font-display text-[2.75rem] sm:text-[4rem] md:text-[5.5rem] lg:text-[6.5rem] xl:text-[8rem] font-bold leading-[0.85] sm:leading-[0.88] mb-4 text-image-clip text-left"
               style={{ backgroundImage: `url(${heroBg})` }}
             >
               {agenda.title.toUpperCase()}
             </h1>
-            <div className="line-glow h-px w-28 sm:w-40 mx-auto" />
+            <div className="line-glow h-px w-28 sm:w-40 mr-auto" />
           </motion.div>
         </div>
       </section>

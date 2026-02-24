@@ -94,37 +94,23 @@ const Programs = () => {
   return (
     <Layout>
       {/* ── Hero ── */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden bg-background/85">
+      <section className="relative overflow-hidden bg-background/85 pt-32 pb-20 md:pt-40 md:pb-24">
         <div className="absolute inset-0 dot-pattern opacity-40" />
-
         <div className="absolute inset-0 opacity-[0.07]">
           <img src={eventEquipmentDistribution} alt="" className="w-full h-full object-cover" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/70 to-background" />
 
-        <motion.div
-          className="hero-gradient-orb"
-          style={{ width: 400, height: 400, left: "20%", top: "15%", background: "hsl(24 90% 54% / 0.10)" }}
-          animate={{ y: [0, -20, 0], scale: [1, 1.06, 1] }}
-          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="hero-gradient-orb"
-          style={{ width: 300, height: 300, right: "12%", bottom: "18%", background: "hsl(220 60% 60% / 0.06)" }}
-          animate={{ y: [0, 15, 0], scale: [1, 0.95, 1] }}
-          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-        />
-
-        <div className="relative z-10 container mx-auto px-4 text-center py-32 md:py-40">
+        <div className="relative z-10 container mx-auto px-4">
           <motion.div
             variants={stagger}
             initial="hidden"
             animate="show"
-            className="flex flex-col items-center"
+            className="flex flex-col items-start"
           >
             <motion.span
               variants={fadeUp}
-              className="inline-flex items-center gap-2 text-[10px] sm:text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-8 px-5 py-2 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-sm"
+              className="inline-flex items-center gap-2 text-[10px] sm:text-xs font-semibold uppercase tracking-[0.2em] text-primary mb-6 px-5 py-2 rounded-full border border-primary/20 bg-primary/5 backdrop-blur-sm"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
               What We Do
@@ -132,7 +118,7 @@ const Programs = () => {
 
             <motion.h1
               variants={fadeUp}
-              className="font-display text-[4rem] sm:text-[6rem] md:text-[8rem] lg:text-[10rem] xl:text-[12rem] font-bold leading-[0.85] sm:leading-[0.88] mb-6 sm:mb-8 text-image-clip"
+              className="font-display text-[3.25rem] sm:text-[4.75rem] md:text-[6.5rem] lg:text-[8rem] xl:text-[9.5rem] font-bold leading-[0.85] sm:leading-[0.88] mb-6 sm:mb-8 text-image-clip text-left"
               style={{ backgroundImage: `url(${heroBg})` }}
             >
               OUR
@@ -140,11 +126,11 @@ const Programs = () => {
               PROGRAMS
             </motion.h1>
 
-            <motion.div variants={fadeUp} className="line-glow h-px w-28 sm:w-40 mx-auto mb-6 sm:mb-8" />
+            <motion.div variants={fadeUp} className="line-glow h-px w-28 sm:w-40 mr-auto mb-6 sm:mb-8" />
 
             <motion.p
               variants={fadeUp}
-              className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl leading-relaxed"
+              className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl leading-relaxed text-left"
             >
               Four strategic programs designed to educate, equip, lead, and heal Africa's most valuable asset — its youth.
             </motion.p>

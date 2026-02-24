@@ -17,15 +17,8 @@ const navLinks = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   const { resolved, setTheme } = useTheme();
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   useEffect(() => {
     setOpen(false);
@@ -34,22 +27,16 @@ const Navbar = () => {
   const toggleTheme = () => setTheme(resolved === "dark" ? "light" : "dark");
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? "nav-glass shadow-sm" : "bg-transparent"
-      }`}
-    >
-      <div className="container mx-auto flex items-center justify-between px-4 py-3 sm:py-4">
-        {/* Logo */}
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent border-0 shadow-none">
+      <div className="container mx-auto flex items-center justify-between px-4 py-3 sm:py-4 pb-6 sm:pb-8">
         <Link to="/" className="flex items-center gap-2 group">
           <img
             src={vhayLogo}
             alt="VHAY Logo"
-            className="h-12 sm:h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+            className="h-[5.4rem] sm:h-[6.3rem] w-auto object-contain group-hover:opacity-90 transition-opacity duration-300"
           />
         </Link>
 
-        {/* Desktop nav links */}
         <div className="hidden lg:flex items-center gap-1">
           {navLinks.map((link) => {
             const isActive = location.pathname === link.path;
@@ -57,7 +44,7 @@ const Navbar = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className="relative px-4 py-2 text-[11px] font-semibold tracking-wider rounded-lg transition-colors duration-200"
+                className="relative px-4 py-2 text-[11px] font-semibold tracking-wider transition-colors duration-200"
               >
                 <span
                   className={
@@ -71,7 +58,7 @@ const Navbar = () => {
                 {isActive && (
                   <motion.div
                     layoutId="nav-indicator"
-                    className="absolute bottom-0.5 left-3 right-3 h-0.5 bg-primary rounded-full"
+                    className="absolute bottom-0.5 left-3 right-3 h-0.5 bg-primary"
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />
                 )}
@@ -80,11 +67,10 @@ const Navbar = () => {
           })}
         </div>
 
-        {/* Desktop actions */}
         <div className="hidden lg:flex items-center gap-2">
           <button
             onClick={toggleTheme}
-            className="w-9 h-9 rounded-xl flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors duration-200"
+            className="w-9 h-9 flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors duration-200"
             aria-label="Toggle theme"
           >
             {resolved === "dark" ? <Sun size={16} /> : <Moon size={16} />}
@@ -98,18 +84,17 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Mobile actions */}
         <div className="flex lg:hidden items-center gap-1">
           <button
             onClick={toggleTheme}
-            className="w-10 h-10 flex items-center justify-center rounded-xl text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors"
+            className="w-10 h-10 flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors"
             aria-label="Toggle theme"
           >
             {resolved === "dark" ? <Sun size={18} /> : <Moon size={18} />}
           </button>
           <button
             onClick={() => setOpen(!open)}
-            className="w-10 h-10 flex items-center justify-center rounded-xl text-foreground hover:bg-muted transition-colors"
+            className="w-10 h-10 flex items-center justify-center text-foreground"
           >
             <AnimatePresence mode="wait">
               {open ? (
@@ -126,7 +111,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {open && (
           <motion.div
@@ -134,9 +118,9 @@ const Navbar = () => {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
-            className="lg:hidden bg-background/95 backdrop-blur-2xl border-b border-border/50 overflow-hidden"
+            className="lg:hidden overflow-hidden bg-background"
           >
-            <div className="container mx-auto px-4 py-4 sm:py-6 flex flex-col gap-1">
+            <div className="container mx-auto px-4 py-4 sm:py-6 flex flex-col gap-0">
               {navLinks.map((link, i) => (
                 <motion.div
                   key={link.path}
@@ -147,10 +131,10 @@ const Navbar = () => {
                   <Link
                     to={link.path}
                     onClick={() => setOpen(false)}
-                    className={`block px-4 py-3 text-sm font-semibold tracking-wider rounded-xl transition-all duration-200 ${
+                    className={`block px-4 py-3 text-sm font-semibold tracking-wider transition-all duration-200 ${
                       location.pathname === link.path
-                        ? "text-primary bg-primary/5"
-                        : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                        ? "text-primary"
+                        : "text-muted-foreground hover:text-foreground"
                     }`}
                   >
                     {link.label}
