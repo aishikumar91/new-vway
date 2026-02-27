@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, ChevronDown, Heart, Users, Globe, Sparkles, BookOpen, Briefcase, Lightbulb, Stethoscope, CheckCircle } from "lucide-react";
 import Layout from "@/components/Layout";
 import heroBg from "@/assets/hero-bg.jpg";
-import heroVideo from "@/assets/Generate_a_video_202602240824_6rq8i.mp4";
+
 
 const impactStats = [
   { icon: Users, value: "1,000+", label: "Youth Empowered" },
@@ -35,17 +35,8 @@ const Index = () => {
   return (
     <Layout>
       {/* ===== HERO ===== */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-24 md:pt-32">
-        <video
-          src={heroVideo}
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover z-0"
-        />
-        <div className="absolute inset-0 bg-white/20 dark:bg-black/25 backdrop-blur-sm z-[1]" aria-hidden />
-        <div className="absolute inset-0 dot-pattern opacity-15 z-[2]" aria-hidden />
+      <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-background/85 pt-24 md:pt-32">
+        <div className="absolute inset-0 dot-pattern opacity-30" />
 
         <motion.div
           style={{ opacity: heroOpacity, scale: heroScale, y: parallaxY }}
